@@ -1,0 +1,54 @@
+@mixin three-col {
+    float: left;
+    width: 33%;
+}
+
+@mixin three-row {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@mixin two-col {
+    float: left;
+    width: 50%;
+}
+
+@mixin two-row {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.feat{
+    @include three-col;
+}
+
+.features:after{
+    @include three-row;
+}
+
+nav {
+   background-color: gray; 
+   padding: 2px;
+}
+
+.landing {
+    h1{
+        background-image: url('http://allaboutwindowsphone.com/images/features/misc/bluebells.jpg');
+        padding: 12rem;
+        text-align: center;
+        color: white;
+    }
+}
+
+.info:after {
+    @include two-row;
+}
+
+.card {
+    @include two-col;
+    img{
+        width: 90%;
+    }
+}
